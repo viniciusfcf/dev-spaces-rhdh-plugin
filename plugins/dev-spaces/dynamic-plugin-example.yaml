@@ -1,0 +1,16 @@
+    plugins:
+      - package: 'http://plugin-registry:8080/internal-backstage-plugin-dev-spaces-backend-dynamic-0.1.0.tgz'
+        disabled: false
+        integrity: 'sha512-UqwUu9UuuPa6SUaOFsb89a1EoayiqhM9H1Q3N5yMDdsKjUP6Pl0smXGslOzCjWdc3zyUWgECX7daWOJKWroAKQ=='
+      - package: 'http://plugin-registry:8080/internal-backstage-plugin-dev-spaces-dynamic-0.1.0.tgz'
+        disabled: false
+        integrity: 'sha512-alEWxyP6jEOWscDJqmqO3ZUAyuMcyHNHphMvGz2etELfhk12ajg7nr8AEWS5BK7H6pPuSsQcJzohydzF41p5Nw=='
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-dev-spaces:
+                dynamicRoutes:
+                - path: /dev-spaces
+                  importName: DevSpacesPage
+                  menuItem:
+                    text: 'Dev Spaces'
